@@ -19,7 +19,7 @@ public class FundamentalsApplication {
 		SpringApplication.run(FundamentalsApplication.class, args);
 	}
 
-	@Bean
+	// @Bean
 	public CommandLineRunner demo(ApplicationRepository repository) {
 		return (args) -> {
 			repository.save(new Application("Trackzilla","kesha.williams","Application for tracking bugs."));
