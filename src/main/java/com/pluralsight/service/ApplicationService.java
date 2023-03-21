@@ -2,6 +2,10 @@ package com.pluralsight.service;
 
 import com.pluralsight.entity.Application;
 
+import java.util.List;
+
 public interface ApplicationService {
-    Iterable<Application> listApplications();
+    List<Application> listApplications();
+    Application findApplication(Integer id);
 }
+

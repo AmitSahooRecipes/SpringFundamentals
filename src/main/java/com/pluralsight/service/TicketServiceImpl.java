@@ -2,6 +2,9 @@ package com.pluralsight.service;
 
 import com.pluralsight.entity.Ticket;
 import com.pluralsight.repository.TicketRepository;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,8 +14,8 @@ public class TicketServiceImpl implements TicketService {
     private TicketRepository ticketRepository;
 
     @Override
-    public Iterable<Ticket> listTickets() {
-        return ticketRepository.findAll();
+    public List<Ticket> listTickets() {
+        return (List<Ticket>) ticketRepository.findAll();
     }
 
 }

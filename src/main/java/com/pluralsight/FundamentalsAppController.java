@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class FundamentalsAppController {
-	@RequestMapping("/hello")    
+	@RequestMapping("/welcome")    
 	String home() {
-		return ("Hello Pluralsight!!!!");
+		return ("Welcome to Trackzilla");
 	}
 }
