@@ -1,0 +1,33 @@
+type Application {
+  id: ID!
+  name: String!
+  owner: String!
+  description: String!
+}
+
+type Tickets {
+  id: ID!
+  title: String!
+  description: String!
+}
+
+type Release {
+  id: ID!
+  releaseDate: String!
+  description: String!
+}
+
+type Query {
+  findAllApplications: [Application]!
+  findAllTickets: [Tickets]!
+  findAllReleases: [Release]!
+  countApplications: Long!
+  countTickets: Long!
+  countReleases: Long!
+}
+
+type Mutation {
+  newApplication(name: String!, owner: String!, description: String!) : Application!
+  deleteApplication(id:ID!) : Boolean
+  updateApplicationOwner(newOwner: String!, id:ID!) : Application!
+}

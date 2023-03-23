@@ -20,7 +20,7 @@ public class ApplicationServiceImpl implements ApplicationService {
     }
 
     @Override
-    public Application findApplication (Integer id) {
+    public Application findApplication (Long id) {
         Optional<Application> optionalApplication = applicationRepository.findById(id);
 
         if(optionalApplication.isPresent())

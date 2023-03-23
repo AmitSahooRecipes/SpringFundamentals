@@ -14,3 +14,5 @@ INSERT INTO release (id, description, release_date) VALUES (4,'Q4 Release Contai
 INSERT INTO ticket_release (release_fk, ticket_fk) VALUES (1,3);
 INSERT INTO ticket_release (release_fk, ticket_fk) VALUES (2,1);
 INSERT INTO ticket_release (release_fk, ticket_fk) VALUES (2,4);
+
+Alter sequence hibernate_sequence restart with 100;

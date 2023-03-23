@@ -42,7 +42,7 @@ public class TzaRestController {
     }
 
     @GetMapping("/application/{id}")
-    public ResponseEntity<Application> getApplication(@PathVariable("id") Integer id) {
+    public ResponseEntity<Application> getApplication(@PathVariable("id") Long id) {
         try {
             return new ResponseEntity<Application>(applicationService.findApplication(id), HttpStatus.OK);
         } catch (ApplicationNotFoundException exception) {
